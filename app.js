@@ -20,7 +20,9 @@ var mongoose = require("mongoose");
 // mongoose.connect("mongodb://localhost:27017/yelp_camp", {
 //     useNewUrlParser: true
 // });
-mongoose.connect("mongodb://joe:Hellsing1@ds211265.mlab.com:11265/joedatabase")
+mongoose.connect("mongodb://joe:Hellsing1@ds211265.mlab.com:11265/joedatabase", {
+    useNewUrlParser: true
+});
 
 // mongodb://joe:Hellsing1@ds211265.mlab.com:11265/joedatabase
 
