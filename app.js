@@ -17,10 +17,14 @@ var methodOverride = require("method-override");
 var Campground = require("./models/campground");
 var seedDB = require("./seed");
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/yelp_camp", {
+// mongoose.connect("mongodb://localhost:27017/yelp_camp", {
+//     useNewUrlParser: true
+// });
+mongoose.connect("mongodb://joe:Hellsing1@ds211265.mlab.com:11265/joedatabase", {
     useNewUrlParser: true
 });
 
+// mongodb://joe:Hellsing1@ds211265.mlab.com:11265/joedatabase
 
 
 app.use(express.static(__dirname + "/public"));
