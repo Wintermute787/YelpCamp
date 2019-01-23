@@ -1,0 +1,56 @@
+<% include ../partials/header %>
+
+
+
+
+    <div class="jumbotron text-center">
+        <h1>Welcome to YelpCamp!</h1>
+        <p>View our hand-picked campgrounds from all over the world</p>
+        <p><a class="btn btn-primary btn-md" href="/campgrounds/new" role="button">Add New Campground</a></p>
+    </div>
+
+    <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+
+
+        <%campgrounds.forEach(function(campground){%>
+
+        <div class="col-md-3 col-sm-6">
+            <div class="thumbnail">
+                <img src="<%= campground.image %>">
+            </div>
+            <div class="caption">
+                <h5>
+                    <%=campground.name%>
+                </h5>
+            </div>
+            <p>
+                <a href="/campgrounds/<%=campground._id%>" class="btn btn-primary">More Info</a>
+            </p>
+        </div>
+        <% }) %>
+    </div>
+
+    <!-- <script type="text/javascript" src="https://maps.google.com/map...">$("#checkingAddress").click(checkGeocode);
+
+        function checkGeocode(){
+        var addr = document.getElementById("location");
+        // Get geocoder instance
+        var geocoder = new google.maps.Geocoder();
+        
+        // Geocode the address
+        geocoder.geocode({'address': addr.value}, function(results, status){
+        if (status === google.maps.GeocoderStatus.OK && results.length > 0) {
+        alert('looks good')
+        // set it to the correct, formatted address if it's valid
+        addr.value = results[0].formatted_address;;
+        
+        // show an error if it's not
+        }else alert("Invalid address");
+        });
+        };</script> -->
+
+   
+
+
+
+<% include ../partials/footer %>
