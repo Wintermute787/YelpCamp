@@ -12,6 +12,8 @@ var options = {
   formatter: null
 };
 
+console.log(process.env.GEOCODER_API_KEY)
+
  
 var geocoder = NodeGeocoder(options);
 
